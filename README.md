@@ -1,6 +1,6 @@
-# 🦇 BatComputer — Local AI Stack
+# 🦇 BatComputer — Local AI or Cloud AI Stack
 
-> A fully self-hosted, locally executing AI agent setup running on consumer hardware.
+> A fully self-hosted, locally or Cloud Based executing AI agent setup running on consumer hardware.
 
 ## Hardware
 
@@ -17,8 +17,8 @@
 |-------|------|
 | Model Runtime | [Ollama](https://ollama.com) (Windows-native) |
 | Primary Model | `qwen2.5-coder:3b` (local, offline) |
-| Cloud Fallback | Gemini 2.0 Flash (via API) |
-| Agent Platform | [OpenClaw](https://openclaw.ai) |
+| Cloud Fallback | Gemini 2.5 Flash (via API) |
+| Agent Platform | [Hermes agent] search it up!!!!|
 
 ## Architecture
 
@@ -26,9 +26,8 @@
 Windows Host
 ├── Ollama (background service) → localhost:11434
 │   └── qwen2.5-coder:3b (~2GB VRAM)
-└── OpenClaw (agent platform)
-    ├── Provider: Ollama (local)
-    └── Provider: Gemini (cloud fallback)
+└── Hermes Agent (agent platform)
+    ├── Provider: Gemini (2.5flash) (use according to your needs any AI or LLM or Cloud based)
 
 WSL2 (Ubuntu)
 └── Dev environment, scripts, configs
@@ -39,7 +38,7 @@ WSL2 (Ubuntu)
 | Phase | Description | Status |
 |-------|-------------|--------|
 | [Phase 1](phases/phase1-ollama-windows.md) | Ollama + Model + Gemini API | 🔄 In Progress |
-| [Phase 2](phases/phase2-openclaw.md) | OpenClaw Installation & Config | ⏳ Pending |
+| [Phase 2](phases/phase2-openclaw.md) | Hermes Agent Installation & Config | ⏳ Pending |
 | [Phase 3](phases/phase3-providers.md) | Provider Setup (Local + Cloud) | ⏳ Pending |
 | [Phase 4](phases/phase4-networking.md) | WSL2 Networking (if needed) | ⏳ Pending |
 | [Phase 5](phases/phase5-verification.md) | End-to-End Verification | ⏳ Pending |
